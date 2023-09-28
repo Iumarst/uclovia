@@ -1,22 +1,19 @@
-a = int(input('введите коэф.а- '))
-b = int(input('введите коэф.б- '))
-c = int(input('введите коэф с- '))
-
-v = (b**2) - (4*a*c)
-
-if v<0:
-    print('no result')
-
-elif v == 0:
-    x = round((-b) / (2*a), 2)
-    print(f'x = {x}')
-
+import math
+ 
+print("Введите коэффициенты ")
+g = float(input("g = "))
+r = float(input("r = "))
+m = float(input("m = "))
+ 
+z = r ** 2 - 4 * g * m
+print("Дискриминант D = %.2f" % z)
+ 
+if z > 0:
+    x1 = (-r + math.sqrt(z)) / (2 * g)
+    x2 = (-r - math.sqrt(z)) / (2 * g)
+    print("x1 = %.2f \nx2 = %.2f" % (x1, x2))
+elif z == 0:
+    x = -r / (2 * g)
+    print("x = %.2f" % x)
 else:
-    x1 = round((-b + (v)) / (2*a), 2)
-    x2 = round((-b - (v)) / (2*a), 2)
-
-if x1 == x2:
-    print(f'x1 = x2 = {x1}')
-
-else:
-    print(f'x1 = {x1}\nx2 = {x2}')
+    print("Корней нет")
