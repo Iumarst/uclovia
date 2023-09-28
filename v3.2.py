@@ -6,5 +6,7 @@ if f % c == 0:
         print(f / c) 
 else:
         print('деление не возможно')
-        print(f / c) 
+        print(f / c)
+         print( "Остаток деления: ", f % c)  
+        
      
